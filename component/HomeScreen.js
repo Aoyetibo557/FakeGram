@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { StyleSheet,View, Text, Button, ScrollView } from 'react-native'
 import Icon  from 'react-native-vector-icons/AntDesign';
 import Stories from './Stories';
 import StoryImage from "../assets/icon.png";
 import Post from './Post';
 import { useNavigation } from '@react-navigation/native';
+import { AuthContext } from './context';
 
 
 
 function HomeScreen() {
-
+    const {user } = useContext(AuthContext);
     const nav = useNavigation();
 
     return (
@@ -26,14 +27,19 @@ function HomeScreen() {
 
             <View style={styles.storyBar} >
                 <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-                    <Stories pic={'https://source.unsplash.com/random/300x200?sig=${Math.random() * 90}'} username="james"/ >
-                    <Stories pic={'https://source.unsplash.com/random/300x200?sig=${Math.random()} * 70'} username="james"/ >
-                    <Stories pic={'https://source.unsplash.com/random/300x200?sig=${Math.random()} * 20'} username="james"/ >
-                    <Stories pic={'https://source.unsplash.com/random/300x200?sig=${Math.random()} * 40'} username="james"/ >
-                    <Stories pic={'https://source.unsplash.com/random/300x200?sig=${Math.random()} * 60'} username="james"/ >
-                    <Stories pic={'https://source.unsplash.com/random/300x200?sig=${Math.random()} * 80'} username="james"/ >
-                    <Stories pic={'https://source.unsplash.com/random/300x200?sig=${Math.random()} * 100'} username="james"/ >
-                    <Stories pic={'https://source.unsplash.com/random/300x200?sig=${Math.random()} * 120'} username="james"/ >
+                    <Stories pic={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 90)}`} username={user==="" ? "james" : user} />
+                    <Stories pic={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 70)}`} username={user==="" ? "james" : user} />
+                    <Stories pic={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 20)}`} username={user==="" ? "james" : user} />
+                    <Stories pic={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 40)}`} username={user==="" ? "james" : user} />
+                    <Stories pic={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 60)}`} username={user==="" ? "james" : user} />
+                    <Stories pic={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 80)}`} username={user==="" ? "james" : user} />
+                    <Stories pic={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 10)}`} username={user==="" ? "james" : user} />
+                    <Stories pic={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 12)}`} username={user==="" ? "james" : user} />
+                    <Stories pic={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 12)}`} username={user==="" ? "james" : user} />
+                    <Stories pic={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 12)}`} username={user==="" ? "james" : user} />
+                    <Stories pic={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 12)}`} username={user==="" ? "james" : user} />
+                    <Stories pic={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 12)}`} username={user==="" ? "james" : user} />
+                    <Stories pic={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 12)}`} username={user==="" ? "james" : user} />
                     
                 </ScrollView>
             </View>
@@ -48,6 +54,14 @@ function HomeScreen() {
                     <Post image={StoryImage} username="Fallon" postimage={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 200)} * 9`} />              
                     <Post image={StoryImage} username="Fallon" postimage={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 200)} * 1`} />              
                     <Post image={StoryImage} username="Fallon" postimage={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 200)} * 120`} />
+                    <Post image={StoryImage} username="Fallon" postimage={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 200)} * 120`} />             
+                    <Post image={StoryImage} username="Fallon" postimage={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 200)} * 120`} />             
+                    <Post image={StoryImage} username="Fallon" postimage={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 200)} * 120`} />             
+                    <Post image={StoryImage} username="Fallon" postimage={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 200)} * 120`} />             
+                    <Post image={StoryImage} username="Fallon" postimage={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 200)} * 120`} />             
+                    <Post image={StoryImage} username="Fallon" postimage={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 200)} * 120`} />             
+                    <Post image={StoryImage} username="Fallon" postimage={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 200)} * 120`} />             
+                    <Post image={StoryImage} username="Fallon" postimage={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 200)} * 120`} />             
                     <Post image={StoryImage} username="Fallon" postimage={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 200)} * 120`} />             
                     <Post image={StoryImage} username="Fallon" postimage={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 200)} * 120`} />             
                     <Post image={StoryImage} username="Fallon" postimage={`https://source.unsplash.com/random/300x200?sig=${Math.floor(Math.random() * 200)} * 120`} />             

@@ -31,7 +31,7 @@ export default function App() {
   /**
    * used as value props for context api on the auth wapper
    */
-  const [hasUser, setUser] = useState(true); 
+  const [hasUser, setUser] = useState(false); 
   const [user, setTextUsername] = useState("");
 
 

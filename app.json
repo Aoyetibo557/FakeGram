@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "practice",
-    "slug": "practice",
+    "name": "FakeGram",
+    "slug": "fakegram",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "This is the first mobile application i have ever made. Its a clone of Instagram with changes. Updates will be made to this application constantly. Would appreciate any feedback or advice.",
+    "githubUrl": "https://github.com/Aoyetibo557/FakeGram"
   }
 }
